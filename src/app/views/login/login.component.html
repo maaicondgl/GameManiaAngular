@@ -8,7 +8,7 @@
       </div>
       <div class="campo">
         <label for="email">Email</label>
-        <input class="input" id="email" name="email" required type="email" [(ngModel)]="userModel.email">
+        <input class="input" id="email" name="email" required type="email">
       </div>
       <div class="campo">
         <label for="telefone">Telefone</label>
@@ -16,26 +16,29 @@
       </div>
       <div class="campo senha">
         <label for="senha">Senha</label>
-        <input class="input" id="senha" name="senha" required type="password" [(ngModel)]="userModel.senha">
+        <input class="input" id="senha" name="senha" required type="password">
       </div>
       <button class="button" type="submit">cadastrar</button>
       <!-- <a href="#">cadastrar</a> -->
     </form>
   </div>
   <div class="login-cont">
+    <p *ngIf="mensagem !=''">{{mensagem}}</p>
     <form #userForm="ngForm" (ngSubmit)="onSubmit()" id="form-login" class="login">
       <h2 class="subtitulo">login</h2>
       <div class="campo">
         <label for="email">E-mail</label>
-        <input class="input" id="email" name="email" required type="email" [(ngModel)]="userModel.email">
+        <input class="input" id="email" name="email" required type="email" [(ngModel)]="loginModel.email">
       </div>
       <div class="campo senha">
         <label for="senha">Senha</label>
-        <input class="input" id="senha" name="senha" required type="password" [(ngModel)]="userModel.senha">
+        <input class="input" id="senha" name="senha" required type="password" [(ngModel)]="loginModel.password">
       </div>
       <button class="button" type="submit">entrar</button>
-      <!-- <a href="#">entrar</a>
-      <a href="#">esqueceu a senha?</a> -->
+
+
     </form>
+
+
   </div>
 </section>

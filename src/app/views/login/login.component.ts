@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Login } from 'src/app/models/login';
 import { User } from 'src/app/models/user';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,14 +11,22 @@ import { User } from 'src/app/models/user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private loginservice:LoginService) { }
 
   ngOnInit(): void {
   }
+  loginModel = new Login();
+  mensagem =""
 
-  userModel = new User ("", "")
   onSubmit(){
-    console.log(this.userModel)
+   this.loginservice.login(this.loginModel).subscribe((response)=>{
+    this.mensagem = "login com sucesso";
+    this.router.navigateByUrl("/");
+   },(error)=>{
+     this.mensagem= error.error
+   })
   }
+
+  
 
 }

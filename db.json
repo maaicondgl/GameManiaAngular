@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "email": "maicon@mail.com",
+      "password": "$2a$10$KTYzpkulfZdxw5dC1aaoYucPIEeuhXvgA0tjnZRp.p9//8Kko4G1u",
+      "id": 1
+    }
+  ],
   "noticias": [
     {
       "id": 1,

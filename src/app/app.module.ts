@@ -12,6 +12,7 @@ import { LoginComponent } from './views/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SlideComponent } from './views/slide/slide.component';
 import { NewsComponent } from './views/news/news.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
 
@@ -26,6 +27,7 @@ import { NewsComponent } from './views/news/news.component';
     LoginComponent,
     SlideComponent,
     NewsComponent,
+    NotFoundComponent,
 
     
   ],
